@@ -1,3 +1,4 @@
+<img src="assets/intro.gif"/>
 # Vim Wack-a-mole
 
 ## Introduction
@@ -35,7 +36,6 @@ line will become the target.
 5. Clicking start or pressing "enter" will reset the score and timer to go
 again.
 
-<img src="assets/intro.gif"/>
 
 ## Running locally
 
