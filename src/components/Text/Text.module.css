@@ -4,7 +4,7 @@
 
 .line {
   display: grid;
-  grid-template-columns: 15px auto;
+  grid-template-columns: 20px auto;
   gap: 15px;
 }
 
@@ -14,4 +14,5 @@
 
 .lineNumber {
   font-weight: bold;
+  color: var(--accent-pink);
 }
