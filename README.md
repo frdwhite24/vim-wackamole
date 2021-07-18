@@ -41,9 +41,11 @@ again.
 
 ## Running locally
 
-```bash # Install dependencies npm i
+```bash
+# Install dependencies
+npm i
 
-# Start the server npm start
-
+# Start the server
+npm start
 ```
 
