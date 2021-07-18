@@ -22,6 +22,23 @@
   --warn-yellow: hsl(50, 100%, 50%);
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--darkest-purple);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-pink);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-pink-darker);
+}
+
 .target {
   background: var(--accent-pink-transp);
 }

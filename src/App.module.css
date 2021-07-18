@@ -1,5 +1,5 @@
 .root {
   background-color: var(--darkest-purple);
-  height: 100vh;
   padding: 40px;
+  min-height: 100vh;
 }

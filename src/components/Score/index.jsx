@@ -8,7 +8,10 @@ export const Score = ({ score, hasFinished }) => {
     <div className={styles.root}>
       <p className={styles.value}>{score}</p>
       <h2 className={styles.header}>Score</h2>
-      <Confetti active={hasFinished} />
+      <Confetti
+        active={hasFinished}
+        config={{ spread: 360, dragFriction: 0.3 }}
+      />
     </div>
   );
 };
