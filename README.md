@@ -10,7 +10,6 @@ Still to do:
 
 - Typescript once happy with POC
 - Tests
-- Relative line movements with numeric prefixes to actions
 - Global state manager like Zustand
 - Session leaderboard
 - Github Actions to host it on Github Pages
@@ -25,14 +24,6 @@ Still to do:
 - react-hotkeys-hook
 - react-dom-confetti
 
-## Running locally
-
-```bash # Install dependencies npm i
-
-# Start the server npm start
-
-```
-
 ## Usage
 
 1. Click start!
@@ -44,4 +35,13 @@ line will become the target.
 5. Clicking start or pressing "enter" will reset the score and timer to go
 again.
 
-   __insert gif here__
+<img src="assets/intro.gif"/>
+
+## Running locally
+
+```bash # Install dependencies npm i
+
+# Start the server npm start
+
+```
+
