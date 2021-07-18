@@ -1,5 +1,7 @@
-<img src="assets/intro.gif"/>
-# Vim Wack-a-mole
+<div align="center">
+  <img src="assets/intro.gif"/>
+  <h1>Vim Wack-a-mole🧑‍💻</h1>
+</div>
 
 ## Introduction
 
