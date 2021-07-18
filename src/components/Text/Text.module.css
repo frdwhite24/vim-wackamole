@@ -1,0 +1,17 @@
+.lines {
+  list-style: none;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: 15px auto;
+  gap: 15px;
+}
+
+.line p {
+  margin: 1px 0;
+}
+
+.lineNumber {
+  font-weight: bold;
+}
