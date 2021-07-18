@@ -22,6 +22,12 @@ Still to do:
 - Variable difficulty
 - 2D movement with a cursor position rather than only line position
 
+## Built with
+
+- React
+- Snowpack
+- react-hotkeys-hook
+
 ## Running locally
 
 ```bash
@@ -33,3 +39,14 @@ npm start
 
 ```
 
+## Usage
+
+1. Click start!
+2. Use the "j" and "k" keys to travel to the target line
+3. Once you reach the target line, your score will tick up 1 point and a new
+   line will become the target.
+4. Try to get quicker and beat your score for a 15 second round!
+5. Clicking start or pressing "enter" will reset the score and timer to go
+   again.
+
+   __insert gif here__

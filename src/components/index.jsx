@@ -4,3 +4,4 @@ export { Score } from './Score';
 export { Controls } from './Controls';
 export { Timer } from './Timer';
 export { Header } from './Header';
+export { GameInfo } from './GameInfo';

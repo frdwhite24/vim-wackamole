@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 
-import { Text, CommandLine, Score, Controls, Timer, Header } from '@components';
+import { Text, CommandLine, Controls, Header, GameInfo } from '@components';
 import { getTargetLine } from '@utils';
 import { ROUND_TIME, STARTING_POINT } from '@config';
-import './App.css';
+import styles from './App.module.css';
 
 export const App = () => {
   // TODO: implement better global state management with context & reducer or a
   // global state store like Zustand
   const [currentLine, setCurrentLine] = useState(STARTING_POINT);
   const [lastPressed, setLastPressed] = useState([]);
-  const [targetLine, setTargetLine] = useState(getTargetLine(5));
+  const [targetLine, setTargetLine] = useState(null);
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(ROUND_TIME);
   const [isGamePlaying, setIsGamePlaying] = useState(false);
+  const [hasFinished, setHasFinished] = useState(false);
 
   const handleScore = () => {
     setTargetLine(getTargetLine(currentLine));
@@ -29,8 +30,10 @@ export const App = () => {
   // This currently handles both cases: start and reset, the UX could be improved
   // here to make clear the functionality that would happen upon click of start
   const handleStart = () => {
+    setHasFinished(false);
     setTimeLeft(ROUND_TIME);
     setScore(0);
+    setTargetLine(getTargetLine(STARTING_POINT));
     setIsGamePlaying(true);
   };
 
@@ -40,6 +43,8 @@ export const App = () => {
         setTimeout(() => setTimeLeft((prevTimeLeft) => prevTimeLeft - 1), 1000);
       } else {
         setIsGamePlaying(false);
+        setTargetLine(null);
+        setHasFinished(true);
       }
     }
   }, [isGamePlaying, timeLeft]);
@@ -67,10 +72,9 @@ export const App = () => {
   });
 
   return (
-    <div>
+    <div className={styles.root}>
       <Header />
-      <Score score={score} />
-      <Timer timeLeft={timeLeft} />
+      <GameInfo score={score} timeLeft={timeLeft} hasFinished={hasFinished} />
       <Text currentLine={currentLine} targetLine={targetLine} />
       <Controls handleStart={handleStart} isGamePlaying={isGamePlaying} />
       <CommandLine lastPressed={lastPressed} />

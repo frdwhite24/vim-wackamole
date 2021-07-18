@@ -1,0 +1,31 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--white);
+}
+
+:root {
+  --black: hsl(0, 5%, 8%);
+  --med-black: hsl(0, 5%, 12%);
+  --light-black: hsl(0, 5%, 20%);
+  --white: hsl(270, 5%, 91%);
+  --accent-pink: hsl(343, 88%, 57%);
+  --accent-pink-darker: hsl(343, 88%, 40%);
+  --accent-pink-transp: hsla(343, 88%, 57%, 20%);
+  --darkest-purple: hsl(279, 30%, 15%);
+  --dark-purple: hsl(279, 30%, 39%);
+  --med-purple: hsl(265, 19%, 45%);
+  --warn-yellow: hsl(50, 100%, 50%);
+}
+
+.target {
+  background: var(--accent-pink-transp);
+}
+
+.current {
+  background: var(--light-black);
+}
