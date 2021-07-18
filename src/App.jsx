@@ -5,6 +5,7 @@ import { Text, CommandLine, Controls, Header, GameInfo } from '@components';
 import { getTargetLine } from '@utils';
 import { ROUND_TIME, STARTING_POINT } from '@config';
 import styles from './App.module.css';
+import { MAX_LINES } from './config';
 
 export const App = () => {
   // TODO: implement better global state management with context & reducer or a
@@ -60,7 +61,7 @@ export const App = () => {
   // entries to an array and wipe upon press of j,k or esc
   useHotkeys('j', () => {
     setCurrentLine((prevCurrent) =>
-      prevCurrent + 1 > 30 ? 30 : prevCurrent + 1,
+      prevCurrent + 1 > MAX_LINES ? MAX_LINES : prevCurrent + 1,
     );
     setLastPressed((prevLast) => [...prevLast.slice(-15), 'j']);
   });

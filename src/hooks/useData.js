@@ -6,11 +6,11 @@ export const useData = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        'https://free-public-api.herokuapp.com/generate_lorem_ipsum/?input=6',
+        'https://hipsum.co/api/?type=hipster-centric&sentences=25',
       );
-      const data = await response.text();
+      const data = await response.json();
       if (data) {
-        setData(data);
+        setData(data[0]);
       }
     };
     fetchData();
