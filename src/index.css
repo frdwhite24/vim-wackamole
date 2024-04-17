@@ -11,11 +11,13 @@
 :root {
   --black: hsl(0, 5%, 8%);
   --med-black: hsl(0, 5%, 12%);
+  --lighter-light-black: hsl(0, 5%, 40%);
   --light-black: hsl(0, 5%, 20%);
   --white: hsl(270, 5%, 91%);
   --accent-pink: hsl(343, 88%, 57%);
   --accent-pink-darker: hsl(343, 88%, 40%);
   --accent-pink-transp: hsla(343, 88%, 57%, 20%);
+  --accent-blue-transp: hsla(210, 88%, 57%, 20%);
   --darkest-purple: hsl(279, 30%, 15%);
   --dark-purple: hsl(279, 30%, 39%);
   --med-purple: hsl(265, 19%, 45%);
@@ -40,9 +42,9 @@
 }
 
 .target {
-  background: var(--accent-pink-transp);
+  background: var(--accent-blue-transp);
 }
 
 .current {
-  background: var(--light-black);
+  background: var(--lighter-light-black);
 }

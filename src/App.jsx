@@ -61,6 +61,19 @@ export const App = () => {
   // to clean up the App. Also to register numeric prefixes i could append
   // entries to an array and wipe upon press of j,k or esc
   useHotkeys(
+    'down',
+    () => {
+      setCurrentLine((prevCurrent) => {
+        const diff = parseInt(commandEntries) || 1;
+        const result = prevCurrent + diff;
+        if (result > NUM_LINES) return NUM_LINES;
+        return result;
+      });
+      setCommandEntries('');
+    },
+    [commandEntries],
+  );
+  useHotkeys(
     'j',
     () => {
       setCurrentLine((prevCurrent) => {
@@ -86,8 +99,29 @@ export const App = () => {
     },
     [commandEntries],
   );
+  useHotkeys(
+    'up',
+    () => {
+      setCurrentLine((prevCurrent) => {
+        const diff = parseInt(commandEntries) || 1;
+        const result = prevCurrent - diff;
+        if (result < 1) return 1;
+        return result;
+      });
+      setCommandEntries('');
+    },
+    [commandEntries],
+  );
   useHotkeys('enter', () => {
     handleStart();
+  });
+  useHotkeys('space', () => {
+    handleStart();
+  });
+  useHotkeys('backspace', () => {
+    setCommandEntries((prevEntries) => {
+      return prevEntries.length > 1 ? prevEntries.slice(0, -1) : '';
+    });
   });
   useHotkeys('esc', () => {
     setCommandEntries('');
